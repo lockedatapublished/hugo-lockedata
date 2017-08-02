@@ -1,0 +1,39 @@
+{{ "<!-- Portfolio Modals -->" | safeHTML }}
+{{ range sort (where .Site.Pages "Section" "index") }}
+  {{ $perm := add $.Site.LanguagePrefix "/index/portfolio/" }}
+  {{ if and (in .RelPermalink $perm) (ne .RelPermalink $perm) }}
+    <div class="portfolio-modal modal fade" id="portfolioModal{{ .Params.ID }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+       <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            {{ $url := printf "img/portfolio/%s" .Params.img }}
+            <div class="modal-content">
+              <div class="modal-body">
+                <h2>{{ .Title }}</h2>
+                <p class="item-intro text-muted">{{ .Params.subtitle | markdownify }}</p>
+                <img class="img-responsive img-centered" src="{{ $url | absURL }}" alt="">
+                <p>{{ .Content }}</p>
+                <ul class="list-inline">
+                  {{ if .Date }}
+                    <li>{{ i18n "modal.date" }} {{ .Date.Format $.Site.Params.dateFormat }}</li>
+                  {{ end }}
+                  {{ if .Params.client }}
+                    <li>{{ i18n "modal.client" }} <a href="{{ .Params.clientLink }}">{{ .Params.client }}</a></li>
+                  {{ end }}
+                  {{ with .Params.category }}
+                    <li>{{ i18n "modal.category" }} {{ . }}</li>
+                  {{ end }}
+                </ul>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                  <i class="fa fa-times"></i> {{ with .Params.button }}{{ . }}{{ end }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}

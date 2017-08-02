@@ -1,0 +1,71 @@
+{{ "<!-- jQuery -->" | safeHTML }}
+<script src='js/jquery-v3.2.1/jquery.min.js'></script>
+
+{{ "<!-- Bootstrap Core -->" | safeHTML }}
+<script src="{{ "js/bootstrap-v3.3.7/bootstrap.min.js" | absURL }}"></script>
+
+{{ if .Site.Params.contact.enable }}
+  {{ "<!-- Form Validation -->" | safeHTML }}
+  <script src="{{ "js/jquery.form-validator-v2.3.44/jquery.form-validator.min.js" | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Custom Theme -->" | safeHTML }}
+<script src="{{ "js/agency.js" | absURL }}"></script>
+
+{{ template "_internal/google_analytics_async.html" . }}
+
+{{ if .Site.Params.analytics.piwik }}
+  {{ partial "_analytics/piwik.html" . }}
+{{ end }}
+
+{{ range .Site.Params.custom_js }}
+  <script src="{{ . | absURL }}"></script>
+{{ end }}
+  
+ {{ "<!-- calendar -->" | safeHTML }}
+ <script src='js/moment-v2.18.1/moment.min.js'></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet" type="text/css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print'>
+<script src='js/moment-v2.18.1/moment.min.js'></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/gcal.min.js"></script>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet" type="text/css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print'>
+<script>
+
+	$(document).ready(function() {
+	
+		$('#calendarobj').fullCalendar({
+
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,listYear'
+			},
+
+			displayEventTime: false, // don't show the time column in list view
+
+        googleCalendarApiKey: 'AIzaSyATQH8hB-JTno5Snw11GZ4uZVNVxbaiIIc',
+        events: {
+            googleCalendarId: 'n58bvqjr8a5ur8jgb2o712mn4k@group.calendar.google.com'
+        },
+			editable: false,
+			eventClick: function(event) {
+				// opens events in a popup window
+				window.open(event.url, 'gcalevent', 'width=700,height=600');
+				return false;
+			},
+			
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			}
+			
+		});
+		
+	});
+
+</script>
+

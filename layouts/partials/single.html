@@ -1,0 +1,20 @@
+{{ "<!-- Single -->" | safeHTML }}
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-heading">{{ with .Title }}{{ . | markdownify }}{{ end }}</div>
+      <div class="intro-lead-in">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</div>
+    </div>
+  </div>
+</header>
+<section id="single">
+  <div class="container">
+    {{ if .Params.style.center }}
+      <div class="row text-center">
+        {{ .Content }}
+      </div>
+    {{ else }}
+      {{ .Content }}
+    {{ end }}
+  </div>
+</section>

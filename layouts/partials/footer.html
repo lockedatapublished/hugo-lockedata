@@ -1,0 +1,30 @@
+{{ "<!-- Footer section -->" | safeHTML }}
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">
+          {{ with .Site.Copyright }}{{ . | markdownify }}{{ end }}
+        </span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          {{ range .Site.Menus.social }}
+            <li>
+              <a href="{{ .URL | relLangURL }}">{{ .Pre }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          {{ range .Site.Menus.footer }}
+            <li>
+              <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

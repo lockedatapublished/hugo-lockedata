@@ -22,3 +22,6 @@ git submodule add https://github.com/lockedata/hugo-lockedata.git themes/hugo-lo
 git submodule add git@github.com:lockedata/hugo-lockedata.git themes/hugo-lockedata
 git submodule update --init --recursive --remote
 ```
+
+## Sources
+The homepage code is adapted from the [Agency](https://github.com/digitalcraftsman/hugo-agency-theme) theme.
