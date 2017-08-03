@@ -4,8 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import url('https://fonts.googleapis.com/css?family=Short+Stack');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
     overflow-x: hidden;
@@ -55,7 +60,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -74,7 +79,7 @@ h6 {
 .btn-primary {
     border-color: #2165B6;
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #2165B6;
@@ -122,14 +127,14 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: #2165B6;
+    border-color: #E8830C;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #2165B6;
+    background-color: #E8830C;
 }
 
 .btn-xl:hover,
@@ -137,9 +142,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #f6bf01;
-    color: #fff;
-    background-color: #fec503;
+    border-color: #ffffff;
+    color: #E8830C;
+    background-color: #ffffff;
 }
 
 .btn-xl:active,
@@ -178,7 +183,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Short Stack","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Comfortaa","Helvetica Neue",Helvetica,Arial,cursive;
     color: #2165B6;
 }
 
@@ -231,7 +236,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
@@ -290,7 +295,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../img/header-bg.png);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -315,7 +320,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
@@ -338,7 +343,7 @@ header .intro-text .intro-heading {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
@@ -788,28 +793,28 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -830,7 +835,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 
@@ -838,7 +843,7 @@ footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
     text-transform: none;
-    font-family: 'Short Stack',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 

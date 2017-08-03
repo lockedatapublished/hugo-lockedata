@@ -2,7 +2,7 @@
 <header>
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in">{{ with .Title }}{{ . }}{{ end }}</div>
+      <div class="intro-lead-in">{{ with .Title }}{{ . | markdownify}}{{ end }}</div>
       <div class="intro-heading">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</div>
       {{ with .Params.button }}
         <a href="#services" class="page-scroll btn btn-xl">{{ . }}</a>

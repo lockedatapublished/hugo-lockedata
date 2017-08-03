@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>{{ .Title }}</h1>
+		 <h3>{{ .Params.subtitle | markdownify }}</h3>
+         {{ .Content }}
+      </div>
+    </div>
+	<div class="col-lg-4">
+       <img src="{{ .Params.image }}" alt="" class="img-responsive">
+    </div>
+  </div>
+</div>
+{{ end }}
