@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Contrail+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
@@ -50,7 +50,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: #E8830C;
 }
 
 h1,
@@ -60,8 +60,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #E8830C;
 }
 
 .img-centered {
@@ -79,7 +79,7 @@ h6 {
 .btn-primary {
     border-color: #2165B6;
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #2165B6;
@@ -130,7 +130,7 @@ fieldset[disabled] .btn-primary.active {
     border-color: #E8830C;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
@@ -183,8 +183,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Comfortaa","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #2165B6;
+    font-family: "Contrail One","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #E8830C;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -236,16 +236,16 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
     color: #fff;
+	font-size: 125%;
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #2165B6;
+    color: #E8830C;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -262,9 +262,9 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        padding: 10px 0;
         border: 0;
-        background-color: transparent;
+        background-color: #2165B6;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -283,7 +283,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #2165B6;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -313,16 +313,14 @@ header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
-    font-style: italic;
     line-height: 22px;
 }
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 50px;
-    font-weight: 700;
     line-height: 50px;
 }
 
@@ -336,16 +334,14 @@ header .intro-text .intro-heading {
         margin-bottom: 25px;
         font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
     }
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 75px;
-        font-weight: 700;
         line-height: 75px;
     }
 }
@@ -401,7 +397,7 @@ section#single {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(254,209,54,.9);
+    background: rgba(33,101,182,.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -753,7 +749,7 @@ aside.clients img {
 
 aside .heading {
     text-transform: none;
-    color: #4d4d4d;
+    color: #E8830C;
     margin-top: 20px;
     margin-bottom: -40px;
 }
@@ -793,28 +789,28 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -835,7 +831,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 
@@ -843,7 +839,7 @@ footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
     text-transform: none;
-    font-family: 'Comfortaa',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 
@@ -865,12 +861,13 @@ ul.social-buttons li a {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+	background-color: #2165B6;
 }
 
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #2165B6;
+    background-color: #E8830C;
 }
 
 .btn:focus,
@@ -976,4 +973,12 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #2165B6;
+}
+
+/*OVERWRITES*/
+.col-md-4:nth-last-child(2) {
+	margin-left: auto;
+}
+.col-md-4:last-child {
+	margin-right: auto;
 }
