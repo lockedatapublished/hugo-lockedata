@@ -223,6 +223,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-toggle {
     border-color: #2165B6;
     background-color: #2165B6;
+	
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -231,7 +232,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #2165B6;
+    background-color:transparent;
 }
 
 .navbar-default .nav li a {
@@ -251,7 +252,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: #2165B6;
+    background-color:transparent;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
@@ -264,7 +265,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 10px 0;
         border: 0;
-        background-color: #2165B6;
+        background-color:transparent;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -295,13 +296,14 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.png);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+	background-color: #2165B6;
+    background-image: url(../img/ChibiSteph.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
 }
 
 header .intro-text {
@@ -755,10 +757,14 @@ aside .heading {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url(../img/contact-bg.jpg);
-    background-position: center;
+    background-color: #2165B6;
+    background-image: url(../img/ChibiStephContact.svg);
+	background-position: right center;
     background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
 }
 
 section#contact .section-heading {

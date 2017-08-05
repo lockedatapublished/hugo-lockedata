@@ -40,8 +40,8 @@
                   </div>
                 {{ end }}
 
-              </div>
-              <div class="col-md-6">
+              <!--</div>
+              <div class="col-md-6">-->
                 {{ with .Params.fields.name }}
                   <div class="form-group">
                     <input class="form-control" id="name" required="required" type="text" name="name" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
