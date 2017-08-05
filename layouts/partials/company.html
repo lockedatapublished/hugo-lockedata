@@ -15,14 +15,20 @@
       {{ range sort (where .Site.Pages "Section" "index") }}
         {{ $perm := add $.Site.LanguagePrefix "/index/company/" }}
         {{ if and (in .RelPermalink $perm) (ne .RelPermalink $perm) }}
-          <div class="col-md-4">
+    
+  <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+		       {{ if .Params.link }}
+                <a class="service-heading" href="{{ .Params.link | relLangURL }}"><i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa {{ .Params.icon }} fa-stack-1x fa-inverse"></i></a>
+              {{ else }}
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa {{ .Params.icon }} fa-stack-1x fa-inverse"></i>
+              {{ end }}
             </span>
             <h4 class="service-heading">
               {{ if .Params.link }}
-                <a href="{{ .Params.link | relLangURL }}">{{ .Title }}</a>
+                <a class="service-heading" href="{{ .Params.link | relLangURL }}">{{ .Title }}</a>
               {{ else }}
                 {{ .Title }}
               {{ end }}
