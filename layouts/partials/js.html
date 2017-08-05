@@ -69,3 +69,24 @@
 
 </script>
 
+{{ "<!-- Cookie monster -->" | safeHTML }}
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#4d4d4d"
+    },
+    "button": {
+      "background": "#2165b6"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "message": "As we like to measure stuff (what sort of data scientist doesn't?) we use cookies on this site.",
+    "link": "Read about cookies"
+  }
+})});
+</script>
