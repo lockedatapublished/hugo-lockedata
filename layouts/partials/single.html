@@ -1,7 +1,7 @@
 {{ "<!-- Single -->" | safeHTML }}
-<header>
+<header class="single" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }})" {{ end }}>
   <div class="container">
-    <div class="intro-text">
+    <div class="intro-text single">
       <div class="intro-heading">{{ with .Title }}{{ . | markdownify }}{{ end }}</div>
       <div class="intro-lead-in">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</div>
     </div>
