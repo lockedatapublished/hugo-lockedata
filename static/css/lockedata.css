@@ -332,6 +332,11 @@ header .intro-text .intro-heading {
         padding-bottom: 200px;
     }
 
+    header  .intro-text.single {
+        padding-top: 100px;
+        padding-bottom: 25px;
+    }
+	
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -368,7 +373,11 @@ section h3.section-subheading {
 }
 
 section#single {
-    padding: 50px 0;
+    padding: 50px 0;	
+}
+
+section#single p {
+	font-size: 1.5em;
 }
 
 @media(min-width:768px) {
