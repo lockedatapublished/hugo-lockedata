@@ -1,5 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+  {{ if .IsPage }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
+  {{ if (not .IsPage) }}
     {{ if and (ne .RelPermalink "/index/index.xml") (ne .RelPermalink (add .Site.LanguagePrefix "/index.xml")) }}
       <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
       <link>{{ .Permalink }}</link>
@@ -12,6 +14,7 @@
       <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
       <atom:link href="{{.URL}}" rel="self" type="application/rss+xml" />
     {{ end }}
+	{{ end }}
     {{ range first 15 (where .Data.Pages "Section" "blog") }}
       <item>
         <title>{{ .Title }}</title>
