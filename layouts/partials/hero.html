@@ -7,6 +7,11 @@
       {{ with .Params.button }}
         <a href="#services" class="page-scroll btn btn-xl">{{ . }}</a>
       {{ end }}
+	  <div>
+      {{ with .Params.communitylink }}
+        <a href="#community" class="white">{{ . }}</a>
+      {{ end }}
+	  </div>
     </div>
   </div>
 </header>

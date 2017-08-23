@@ -53,6 +53,10 @@ a.active {
     color: #E8830C;
 }
 
+a.white {
+    color: white;
+}
+
 h1,
 h2,
 h3,
