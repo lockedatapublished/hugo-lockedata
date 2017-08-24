@@ -8,8 +8,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow:none;
+	text-rendering: optimizeLegibility;
 }
 
 body {
@@ -84,7 +86,6 @@ h6 {
     border-color: #2165B6;
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
     color: #fff;
     background-color: #2165B6;
 }
@@ -130,13 +131,23 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-    padding: 20px 40px;
+    padding: 5px 20px;
     border-color: #E8830C;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 3em;
+    color: #fff;
+    background-color: #E8830C;
+}
+
+.btn-hero {
+    padding: 10px 90px;
+    border-color: #E8830C;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 5em;
     color: #fff;
     background-color: #E8830C;
 }
@@ -145,6 +156,10 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:focus,
 .btn-xl:active,
 .btn-xl.active,
+.btn-hero:hover,
+.btn-hero:focus,
+.btn-hero:active,
+.btn-hero.active,
 .open .dropdown-toggle.btn-xl {
     border-color: #ffffff;
     color: #E8830C;
@@ -184,6 +199,11 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+}
+
+.navcontainer {
+	width: 96%;
+	margin: auto;
 }
 
 .navbar-default .navbar-brand {
@@ -239,13 +259,28 @@ fieldset[disabled] .btn-xl.active {
     background-color:transparent;
 }
 
+.navbar-default .nav ul {
+	line-height: 0;
+	list-style: none;
+}
+
+.navbar-default .nav li::before {
+	content: none;
+	color: #E8830C;
+	display: inline;
+	width: 0;
+	margin-left: 0%;
+}
+
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
-    color: #fff;
+    color: #ffffff;
 	font-size: 125%;
+	padding-top: 0;
 }
+
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
@@ -405,6 +440,7 @@ section#single p {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
+	background-color: white;
 }
 
 #casestudies .portfolio-item .portfolio-link .portfolio-hover {
@@ -809,28 +845,24 @@ section#contact .form-control:focus {
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
     font-family: 'Contrail One',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
     color: #bbb;
 }
 
@@ -862,9 +894,19 @@ footer ul.quicklinks {
     line-height: 40px;
 }
 
+.social-buttons li::before {
+	content: none;
+	color: #E8830C;
+	display: inline;
+	width: 0;
+	margin-left: 0%;
+}
+
 ul.social-buttons {
     margin-top: 20px;
     margin-bottom: 10px;
+	line-height: 0;
+	list-style: none;
 }
 
 ul.social-buttons li a {
@@ -994,10 +1036,69 @@ body {
     webkit-tap-highlight-color: #2165B6;
 }
 
+table, th, td {
+	border: none;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+th {
+	padding: 0.5%;
+	background-color: #2165B6;
+	color: #ffffff;
+}
+
+td {
+	padding: 0.5%;
+	border-bottom: 1px solid #4d4d4d;
+	font-weight: bold;
+	color: #E8830C;
+}
+
+table td:first-child, th:first-child {
+	text-align: left;
+}
+
+table td:first-child {
+	font-weight: normal;
+	color: black;
+}
+
+ul {
+	font-size: 20px;
+    line-height: 1.75;
+	list-style: none;
+}
+
+li::before {
+	content: "•";
+	color: #E8830C;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+li {
+	padding-top: 2%;
+}
+
 /*OVERWRITES*/
 .col-md-4:nth-last-child(2) {
 	margin-left: auto;
 }
 .col-md-4:last-child {
 	margin-right: auto;
+}
+
+.dropdown-menu {
+	color: #E8830C;
+}
+
+#casestudies .img-responsive {
+	margin: 0 auto;
+	padding-top: 5%;
 }
