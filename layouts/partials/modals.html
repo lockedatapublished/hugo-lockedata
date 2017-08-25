@@ -5,7 +5,11 @@
     <div class="portfolio-modal modal fade" id="portfolioModal{{ .Params.ID }}" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
        <div class="container">
+
         <div class="row">
+		                <button type="button" class="btn btn-xl" data-dismiss="modal">
+                  <i class="fa fa-compress"></i> {{ with .Params.button }}{{ . }}{{ end }}
+                </button>
           <div class="col-lg-6">
             {{ $url := printf "img/portfolio/%s" .Params.img }}
             <div class="modal-content">
@@ -25,9 +29,6 @@
                     <li>{{ i18n "modal.category" }} {{ . }}</li>
                   {{ end }}
                 </ul>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">
-                  <i class="fa fa-times"></i> {{ with .Params.button }}{{ . }}{{ end }}
-                </button>
               </div>
             </div>
           </div>
