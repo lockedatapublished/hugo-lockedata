@@ -39,6 +39,10 @@
        {{ partial "company.html" . }}
       {{ end }}
 	  
+	    {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/companyabout/")) (not .Params.disable) }}
+       {{ partial "companyabout.html" . }}
+      {{ end }}
+	  
       {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/contact/")) (not .Params.disable) }}
         {{ partial "contact.html" . }}
       {{ end }}
