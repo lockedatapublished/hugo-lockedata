@@ -23,6 +23,9 @@ body {
     color: #4d4d4d;
 }
 
+.text-white {
+    color: white;
+}
 .text-primary {
     color: #2165B6;
 }
@@ -336,13 +339,18 @@ header {
     color: #fff;
     background-attachment: scroll;
 	background-color: #2165B6;
-    background-image: url(../img/ChibiSteph.svg);
     background-position: left center;
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
     -o-background-size: contain;
+}
+
+@media(min-width:1400px) {
+    header{
+    background-image: url(../img/ChibiSteph.svg);
+    }
 }
 
 header .intro-text {
@@ -807,13 +815,18 @@ aside .heading {
 
 section#contact {
     background-color: #2165B6;
-    background-image: url(../img/ChibiStephContact.svg);
 	background-position: right center;
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
     -o-background-size: contain;
+}
+
+@media(min-width:1400px) {
+    section#contact{
+    background-image: url(../img/ChibiStephContact.svg);
+    }
 }
 
 section#contact .section-heading {
