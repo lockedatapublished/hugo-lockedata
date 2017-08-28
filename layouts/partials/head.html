@@ -6,15 +6,13 @@
   {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
   {{ .Hugo.Generator }}
   
-  <!-- Fix for when no image present -->
-
-  {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/google_news.html" . }}
-{{ template "_internal/schema.html" . }}
-<!--
-{{ template "_internal/twitter_cards.html" . }}
--->
+  <!-- Fix for when no image present -->
 {{ partial "twitter.html" . }}
+{{ partial "opengraph.html" . }}
+{{ partial "schema.html" . }}
+
+
   <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
   
   {{ if .RSSLink }}
