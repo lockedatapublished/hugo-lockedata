@@ -32,35 +32,63 @@
 <script>
 
 	$(document).ready(function() {
-	
-		$('#calendarobj').fullCalendar({
 
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,listYear'
-			},
+	  $('#calendarobj').fullCalendar({
 
-			displayEventTime: false, // don't show the time column in list view
-
-        googleCalendarApiKey: 'AIzaSyATQH8hB-JTno5Snw11GZ4uZVNVxbaiIIc',
-        events: {
-            googleCalendarId: 'n58bvqjr8a5ur8jgb2o712mn4k@group.calendar.google.com'
+	    header: {
+	      left: 'prev,next today',
+	      center: 'title',
+	      right: 'calendar,pastList,futureList'
+	    },
+    views: {
+        pastList: {
+            type: 'listYear',
+            buttonText: 'Past events'
         },
-			editable: false,
-			eventClick: function(event) {
-				// opens events in a popup window
-				window.open(event.url, 'gcalevent', 'width=700,height=600');
-				return false;
-			},
-			
-			loading: function(bool) {
-				$('#loading').toggle(bool);
-			}
-			
-		});
-		
+        futureList: {
+            type: 'listYear',
+            buttonText: 'Upcoming events'
+        },
+        calendar: {
+            type: 'month',
+            buttonText: 'Calendar'
+        }
+    },
+			eventRender: function (evt, elt, v) {
+						if(v.name == 'futureList') {
+							if( evt.start.toDate() <  new Date()) {
+								return false;
+							}
+							
+						} 
+						if (v.name == 'pastList') {
+							if( evt.start.toDate() > new Date()) {
+								return false;
+							}
+						}
+				},
+
+	    displayEventTime: false, // don't show the time column in list view
+
+	    googleCalendarApiKey: 'AIzaSyATQH8hB-JTno5Snw11GZ4uZVNVxbaiIIc',
+	    events: {
+	      googleCalendarId: 'n58bvqjr8a5ur8jgb2o712mn4k@group.calendar.google.com'
+	    },
+	    editable: false,
+	    eventClick: function(event) {
+	      // opens events in a popup window
+	      window.open(event.url, 'gcalevent', 'width=700,height=600');
+	      return false;
+	    },
+
+	    loading: function(bool) {
+	      $('#loading').toggle(bool);
+	    }
+
+	  });
+
 	});
+
 
 </script>
 
