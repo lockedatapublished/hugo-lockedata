@@ -350,6 +350,7 @@ header {
 @media(min-width:1400px) {
     header{
     background-image: url(../img/ChibiSteph.svg);
+    background-position-x: -27%;
     }
 }
 
