@@ -347,12 +347,7 @@ header {
     -o-background-size: contain;
 }
 
-@media(min-width:1400px) {
-    header{
-    background-image: url(../img/ChibiSteph.svg);
-    background-position-x: -27%;
-    }
-}
+
 
 header .intro-text {
     padding-top: 100px;
@@ -376,7 +371,7 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
+        padding-top: 100px;
         padding-bottom: 200px;
     }
 
@@ -399,6 +394,17 @@ header .intro-text .intro-heading {
         font-size: 75px;
         line-height: 75px;
     }
+}
+
+@media(min-width:1400px) {
+    header{
+    background-image: url(../img/ChibiSteph.svg);
+    }
+	header .intro-text {
+    text-align: right;
+	margin-right: 100px;
+	padding-top: 200px;
+}
 }
 
 section {

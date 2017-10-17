@@ -5,11 +5,13 @@
       <div class="intro-lead-in">{{ with .Title }}{{ . | markdownify}}{{ end }}</div>
       <div class="intro-heading">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</div>
       {{ with .Params.button }}
-        <a href="#services" class="page-scroll btn btn-hero">{{ . }}</a>
+        <a href="#services" class="page-scroll btn btn-hero"> <i class="fa fa-play-circle"></i> {{ . }}</a>
       {{ end }}
-	  <div>
-      {{ with .Params.communitylink }}
-        <a href="#community" class="white">{{ . }}</a>
+	  <div style="padding-top:10px;">
+	 
+	   {{ with .Params.communitylink }}
+        <a href="#community"  class="page-scroll btn btn-xl"><i class="fa fa-users"></i> 
+		{{ . }}</a>
       {{ end }}
 	  </div>
     </div>
