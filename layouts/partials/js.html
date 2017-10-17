@@ -12,7 +12,6 @@
 {{ "<!-- Custom Theme -->" | safeHTML }}
 <script src="{{ "js/agency.js" | absURL }}"></script>
 
-{{ template "_internal/google_analytics_async.html" . }}
 
 {{ if .Site.Params.analytics.piwik }}
   {{ partial "_analytics/piwik.html" . }}
@@ -122,3 +121,28 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+
+ {{ "<!-- google analytics w/ autotrack.js -->" | safeHTML }}
+ 
+ {{ with .Site.GoogleAnalytics }}
+ 
+ <script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '{{ . }}', 'auto');
+
+// Replace the following lines with the plugins you want to use.
+ga('require', 'eventTracker');
+ga('require', 'outboundLinkTracker');
+ga('require', 'urlChangeTracker');
+ga('require', 'cleanUrlTracker');
+ga('require', 'impressionTracker');
+ga('require', 'maxScrollTracker');
+ga('require', 'pageVisibilityTracker');
+// ...
+
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<script async src="js/autotrack.js"></script>
+
+{{ end }}
