@@ -1116,7 +1116,7 @@ li {
         margin-left: auto;
     }
 
-    .flexbox.starting, .flexbox.services, .flexbox.community {
+    .flexbox.starting, .flexbox.services, .flexbox.community, .flexbox.about {
         justify-content: center;
     }
 }
