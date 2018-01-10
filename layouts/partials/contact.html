@@ -2,16 +2,11 @@
 <section id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-11">
         {{ with .Title }}
           <h2 class="section-heading">{{ . | markdownify }}</h2>
         {{ end }}
-      </div>
-    </div>
-	<div class="row">
-      <div class="col-lg-11">
-	  
-        {{ with .Params.subtitle }}
+		{{ with .Params.subtitle }}
           <h3 class="section-subheading text-white">{{ . | markdownify }}</h3>
         {{ end }}
 		<!-- Calendly link widget begin -->
@@ -22,9 +17,8 @@
 						Schedule a call
 			</button></a>
 		<!-- Calendly link widget end -->
-		<h3 class="section-subheading text-white">or send us a message</h3>
-	</div>
-	<div class="col-md-1" style="left:30px;">
+      </div>
+	  <div class="col-lg-1" >
         <ul class="social-buttons social-buttons-contact">
           {{ range .Site.Menus.social }}
             <li>
@@ -33,16 +27,15 @@
           {{ end }}
         </ul>
       </div>
-	</div>
+    </div>
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-md-6">
+		<h3 class="text-white">Or send a message</h3>
         {{ if not .Params.postURL }}
           <form  action="//formspree.io/{{ with (or .Site.Params.contact.email .Params.email) }}{{ . }}{{ end }}" method="POST" name="sentMessage" id="contactForm">
         {{ else }}
           <form  action="{{ .Params.postURL }}" method="POST" name="sentMessage" id="contactForm">
         {{ end }}
-            <div class="row">
-              <div class="col-md-6">
                 {{ with .Params.fields.message }}
                   <div class="form-group">
                     <textarea class="form-control" id="message" required="required" name="message" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
@@ -64,19 +57,12 @@
                     <p class="help-block text-danger"></p>
                   </div>
                 {{ end }}
-                {{ with .Params.fields.phone }}
-                  <div class="form-group">
-                    <input class="form-control" id="phone" required="required" type="text" name="phone" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                {{ end }}
 				<input type="text" name="_gotcha" style="display:none" />
 				                <button type="submit" value="Submit" class="btn btn-xl">
                   {{ with .Params.button }}{{ . }}{{ end }}
                 </button>
               </div>
               <div class="clearfix"></div>
-              <div class="col-lg-12">
                 <div class="text-success" id="success" style="display:none;">
                   {{ with .Params.message.success }}
                     {{ . | markdownify }}
@@ -92,8 +78,6 @@
                   {{ end }}
                 </div><br />
 
-              </div>
-            </div>
             {{ range .Params.fields.hidden }}
               {{ if eq .name "site" }}
                 <input type="hidden" name="{{ .name }}" value="{{ $.Permalink }}"/>
