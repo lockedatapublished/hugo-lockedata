@@ -945,12 +945,27 @@ ul.social-buttons li a {
 	background-color: #2165B6;
 }
 
+
+ul.social-buttons-contact li a {
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    font-size: 40px;
+    color: #E8830C;
+	background-color: #fff;
+}
+
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
     background-color: #E8830C;
 }
 
+ul.social-buttons-contact li a:hover,
+ul.social-buttons-contact li a:focus,
+ul.social-buttons-contact li a:active {
+    background-color: #2165b6;
+}
 .btn:focus,
 .btn:active,
 .btn.active,
