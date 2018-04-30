@@ -40,18 +40,44 @@ $('.navbar-collapse ul li a').click(function() {
 
 // Async contact form
 $('form[id=contactForm]').submit(function(){
-  $.post($(this).attr('action'), $(this).serialize(), function(data, textStatus, jqXHR){
+
+  $('form[id=contactForm] #success').hide();
+  $('form[id=contactForm] #error').hide();
+
+  $.ajax({
+    type: 'POST',
+    url: $(this).attr('action'),
+    data: $(this).serialize(),
+    success: function (data, textStatus) {
+      if (jqXHR.status === 200) {
+        $('form[id=contactForm] #success').show();
+      } else {
+        $('form[id=contactForm] #error').show();
+      }
+    },
+    dataType: 'json'
+  })
+
+
+  /*$.post($(this).attr('action'), $(this).serialize(), function(data, textStatus, jqXHR){
     $('form[id=contactForm] #success').hide();
     $('form[id=contactForm] #error').hide();
+
     if (jqXHR.status == 200) {
       $('form[id=contactForm] #success').show();
-    }}, 'json').fail(function(){
+    } else {
+      $('form[id=contactForm] #success').hide();
+      $('form[id=contactForm] #error').hide();
+      $('form[id=contactForm] #error').show();
+    }
+
+  }, 'json').fail(function(){
       $('form[id=contactForm] #success').hide();
       $('form[id=contactForm] #error').hide();
       $('form[id=contactForm] #error').show();
   });
   return false;
-});
+});*/
 
 // Contact form validation
 $('form[id=contactForm]').validate({
