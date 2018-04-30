@@ -56,7 +56,7 @@ $('form[id=contactForm]').submit(function(){
       }
     },
     dataType: 'json'
-  })
+  });
 
 
   /*$.post($(this).attr('action'), $(this).serialize(), function(data, textStatus, jqXHR){
